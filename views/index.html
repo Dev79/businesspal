@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Business Pal: Search Page Home</title>
+  <!--telling the browser to use the device width as the viewport width & disable the initial scale-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Business Pal</h1>
+  <!--simple nav menu, because simplicity is the ultimate sophistication-->
+<div id="navcontainer">
+<ul id="navlist">
+<li><a href="meeting.html">Set up meeting to discuss results!</a></li>
+<!--<li id="active"><a href="#" id="current">Back to Search Page!</a></li>-->
+</ul>
+</div>
+  
+  <input type="text" id="searchText" placeholder="Hello, simply type the text for the product or service you want to analyze and press enter!">
+  <div class="results">
+    <h3>Results...</h3>
+    <lable class="loading">Loading.. Please wait</lable>
+    <br/>
+    <lable class="error">Oh snap!.. Something went wrong, please refresh your browser and try again..</lable>
+    <br/>
+  </div>
+  <section class="tweet-results">
+  </section>
+
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <script type="text/javascript" src="scripts/app.js"></script>
+
+  <script type="text/html" id="tweet_tmpl">
+    <article>
+      <div class="left">
+        <img src="{{=imgSrc}}">
+        <p>{{=tweet}}
+        <a href="{{=tweetLink}}" target="_blank">Go to User Status</a></p>
+      </div>
+      <div class="right">
+        <table>
+          <tr>
+            <td>Score</td>
+            <td>{{=score}}</td>
+          </tr>
+          <tr>
+            <td>Retweeted</td>
+            <td>{{=retweet}}</td>
+          </tr>
+              <tr>
+            <td>Favorited</td>
+            <td>{{=favorited}}</td>
+          </tr>
+           <tr>
+            <td>Positive Words</td>
+            <td>{{=positiveWords}}</td>
+          </tr>
+          <tr>
+            <td>Negative Words</td>
+            <td>{{=negativeWords}}</td>
+          </tr>
+          <tr>
+            <td>Words Matched</td>
+            <td>{{=wordsMatched}}</td>
+          </tr>
+          <tr>
+            <td>Comparative</td>
+            <td>{{=comparative}}</td>
+          </tr>
+          
+        </table>
+      </div>
+    </article>
+  </script>
+</body>
+<br/>
+<!--<footer>Digital Space: All Rights Reserverd developer Bethel Goka</footer>-->
+</html>

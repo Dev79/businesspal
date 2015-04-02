@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BusinessPal: Business Meeting</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<link rel="stylesheet" media="screen" href="css/samplecode.css">-->
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+
+	<body>
+		<h2>Business Meeting</h2>
+		<h3>Welcome to GoTo Meeting! Simply follow the instructions below and check for the respective info in the Info Box!</h3>
+		<div id="wrapper">
+			<fieldset>
+				<legend>Info Box</legend>
+				<textarea name="msgBox" readonly="readonly" id="messageBox" rows="10" cols="33" ></textarea>
+			</fieldset>
+
+			<fieldset>
+				<legend>OAuth authorization</legend>
+				<div>
+					<label for="createcode">Redirects and prompts you to login to your G2M account. Then you will be asked to allow access for this application.</label>
+					 <input type="button" id="createCodeBTN" name="createcode" value="Login to G2M">
+		      		<hr>
+				</div>
+				<div>
+					<label for="getcode">Fetch the authorization code from the URL.</label>
+					<input type="button" id ="getCodeBTN" name="getcode" value="Get Authorization Code" title ="You have to login first.">
+		      		<hr>
+				</div>
+				<div>
+					<label for="createtoken">Use the authorization code to retrieve the access token for this application.</label>
+					<input type="button" id="createTokenBTN" name="createtoken" value="Create Access Token" title ="You have to login first.">
+				</div>
+			</fieldset>
+			
+			<fieldset id="createMeeting">
+				<legend>Create a Meeting </legend>
+				<p>
+				    Fill out the form to create a meeting.
+				</p>
+				<label for="subject">Subject</label>
+				<input id="subject" type="text" name="subject" size="34" />
+
+				<label for="startTime">Start time</label>
+				<input id="startTime" type="time" name="startTime"  />
+				<input id="startDate" type="date" name="startDate"  />
+
+				<label for="endTime">End time</label>
+				<input id="endTime" type="time" name="endTime"  />
+				<input id="endDate" type="date" name="endDate" size="30" />
+
+				<label for="passwordReq">Password required</label>
+				<input id="passwordReq" type="checkbox" name="password" size="30" />
+
+				<label for="conferenceCallInfo">Conference Call Information</label>
+				<select id ="conferenceCallInfo" name="conferenceCallInfo">
+				    <option value="PSTN">PSTN</option>
+				    <option value="Free">Free</option>
+				    <option value="Hybrid">Hybrid</option>
+				    <option value="Private">Private</option>
+					<option value="VoIP">VoIP</option>
+				</select>
+
+				<label for="meetingType">Meeting Type</label>
+				<select id ="meetingType" name="meetingType">
+				    <option value="Immediate">Immediate</option>
+				    <option value="Scheduled">Scheduled</option>
+				    <option value="Recurring">Recurring</option>
+				</select>
+
+				<input type="button" id="createMeetingBTN" value="Create Meeting" title ="You have to fill out all fields." />
+
+			</fieldset>	
+
+			<fieldset id="getMeeting">
+				<legend>Get meeting details / Delete meeting </legend>
+				<p>
+				    Specify which meeting details you'd like to view or delete.
+				</p>
+				<label for="meetingid">Meeting Id</label>
+				<input id="meetingid" type="text" name="meetingid" size="34" />
+
+				<input type="button" id="getMeetingBTN" value="Get Meeting" />
+				<input type="button" id="deleteMeetingBTN" value="Delete Meeting" />
+
+			</fieldset>	
+		</div>
+	</body>
+	<script type="text/javascript" src="scripts/main.js"></script>
+
+	<!--<script type="text/javascript" src="js/main.js"></script>-->
+
+</html>
