@@ -7,14 +7,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//setting the listening from www
-app.set('port', process.env.PORT || 3000);
-
-var server = app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + server.address().port);
-});
-
-
 var routes = require('./routes/index');
 
 /*a convenient variable to refer to the HTML directory- 4vR
