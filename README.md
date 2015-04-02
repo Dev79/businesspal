@@ -1,7 +1,7 @@
-sentimentAnalysisApp
+businesspal
 ====================
 
-A Nodejs based sentiment analysis app. To run the app
+A Nodejs based customer feed back analysis via twitter. To run the app
 
 * Clone/Download the repo
 * Run `npm install`
